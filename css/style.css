@@ -125,6 +125,15 @@ a {
   white-space: nowrap;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .icon {
   display: inline-block;
   width: .8em;
@@ -821,5 +830,90 @@ a {
     & dd {
       font-size: 28px;
     }
+  }
+}
+
+.contact {
+  border-block: 1px solid var(--ink);
+}
+
+.contact__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 6px 16px;
+  padding-block: 16px;
+  border-bottom: 1px solid var(--rule);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  & dt {
+    grid-column: 1 / -1;
+    font: 11.5px/1.5 var(--mono);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  & dd {
+    min-width: 0;
+    font-size: 17px;
+    overflow-wrap: anywhere;
+  }
+
+  @media (min-width: 760px) {
+    grid-template-columns: 11rem minmax(0, 1fr) auto;
+    gap: 24px;
+    padding-block: 22px;
+
+    & dt {
+      grid-column: auto;
+    }
+
+    & dd {
+      font-size: 22px;
+    }
+  }
+}
+
+.contact__row .contact__aside {
+  font: 11.5px/1.5 var(--mono);
+  letter-spacing: .04em;
+  color: var(--muted);
+  white-space: nowrap;
+
+  & .icon {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.copy-button {
+  min-width: 8ch;
+  padding: 5px 11px;
+  border: 1px solid var(--rule-pill);
+  border-radius: 999px;
+  background: none;
+  font: inherit;
+  color: var(--ink);
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+}
+
+.site-footer {
+  padding-block: 28px 40px;
+
+  & p {
+    padding-top: 18px;
+    border-top: 1px solid var(--rule);
+    font: 11.5px/1.5 var(--mono);
+    letter-spacing: .04em;
+    color: var(--muted);
   }
 }
