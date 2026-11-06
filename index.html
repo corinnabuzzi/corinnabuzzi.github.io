@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Corinna Buzzi · Full-stack developer in training</title>
-  <meta name="description" content="Web applications, from the schema to the screen.">
+  <meta name="description" content="Corinna Buzzi, full-stack developer in training in Milan. Projects, background and contact details.">
   <meta name="theme-color" content="#F4F0E6">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
@@ -35,17 +35,17 @@
 
         <h1 class="hero__name" id="hero-name">Corinna<br>Buzzi</h1>
 
-        <p class="hero__tagline">Web applications, from the schema to the <em>screen</em>.</p>
+        <p class="hero__tagline">Full-stack developer in training, based in Milan<span class="hero__dot">.</span></p>
 
         <div class="hero__foot">
           <dl class="hero__meta">
             <div>
-              <dt>Role</dt>
-              <dd>Full-stack developer in training</dd>
+              <dt>Studying</dt>
+              <dd>ITS Tech Talent Factory, until 2027</dd>
             </div>
             <div>
-              <dt>Based</dt>
-              <dd>Milan, IT</dd>
+              <dt>Previously</dt>
+              <dd>Intern at SyncLab</dd>
             </div>
           </dl>
 
@@ -66,7 +66,7 @@
       </div>
 
       <div class="bio">
-        <p>I wrote my first Python script at fifteen, and I’ve thought ever since that programming languages and natural languages are basically the same kind of thing. Both have a grammar, and both break when you’re vague.</p>
+        <p>I studied languages at school and started programming on my own at fifteen, with Python. I’ve always read its syntax as punctuation: a colon opens a block much as it introduces a clause in prose, and indentation marks what belongs to what.</p>
         <p>I’m in the Fullstack Software Development program at ITS Tech Talent Factory until 2027. I did my first internship at SyncLab, a consulting company, working mostly with Java, Spring Boot and Angular. Right now I’m also learning how computers work at a lower level, starting from how a CPU is built.</p>
       </div>
 
@@ -140,8 +140,6 @@
         <span>02 shipped</span>
       </div>
 
-      <p class="section-lead">Things I’ve built, and <em>how</em> they work.</p>
-
       <article class="project" aria-labelledby="p01-title">
         <p class="project__index">
           <span class="project__num">P—01</span>
@@ -159,8 +157,8 @@
           </ul>
 
           <div class="project__text">
-            <p>A Firefox extension and a terminal program that export claude.ai chats to your disk. You browse your chats in the terminal, select a few and press Enter, and each one becomes a folder: the conversation in Markdown, every file Claude made in its final version, and the raw data to rebuild it later. It started as a console script I used for my own notes.</p>
-            <p>The login stays in the browser and the program does the real work, so your session never leaves Firefox. After the first release, a review showed the extension trusted whatever answered on its local port: another program on the same computer could have posed as mine and read every chat. I fixed it before shipping anything else, with a mutual HMAC handshake on the pairing token, and said so in the release notes.</p>
+            <p>I used an open-source script to save my Claude chats as notes, and one day it stopped working. Fixing it made me want to build my own. Chat Exporter has two parts. A Firefox extension reads my chats using the login I already have, and a terminal program lets me pick the ones I want and export them. Each chat becomes a folder with the conversation in Markdown and every file Claude made, in its final version.</p>
+            <p>After the first release, I found a security flaw while testing. The extension sent chats to whatever program answered on its local port, so another program on the same computer could have pretended to be mine and read every chat. In the next release, both sides have to prove they know the pairing token, with a mutual HMAC handshake, before any data moves. One of my security tests passed even with the bug it was meant to catch. Since then I break the code on purpose to check that each test actually fails.</p>
           </div>
 
           <figure class="diagram">
@@ -240,8 +238,8 @@
           </ul>
 
           <div class="project__text">
-            <p>MovieApp shows trending and popular movies and series, and opens a detail page for each title with cast, director or creators, runtime and rating. It was my final exam for the Frontend JS module at ITS Tech Talent Factory. The brief set the features; the design and the code are mine.</p>
-            <p>It’s plain JavaScript with no framework. Halfway through, the code had become hard to work on: the same logic lived in several files and I often didn’t know where to make a change. So I stopped and refactored, moving shared code into a utils module and giving each file one job. It was the first time I really understood why code needs structure, and it turned out to be what made Angular click for me when I started using it.</p>
+            <p>MovieApp shows trending and popular movies and series, and opens a detail page for each title with cast, director or creators, runtime and rating. It was my final exam for the Frontend JS module at ITS Tech Talent Factory. The exam set the features, and I did the design and the code.</p>
+            <p>It’s plain JavaScript with no framework. About halfway through I refactored it: API calls went into one file, shared rendering code into another, and each page got its own script. That refactor was when I understood why code needs structure, and it made Angular much easier to learn later.</p>
           </div>
 
           <ul class="tags" aria-label="Technologies">

@@ -246,7 +246,7 @@ a {
   letter-spacing: -.01em;
   text-wrap: pretty;
 
-  & em {
+  & .hero__dot {
     color: var(--accent);
   }
 
